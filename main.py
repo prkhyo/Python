@@ -113,3 +113,74 @@ print(hyo)       # {'name': 'hyo', 'age': 26, 'korean': True, 'handsome': True}
 
 
 
+# 사용자 정의 함수
+
+def say_hello():  # say_hello 함수 작성 
+  print("hello")  
+
+
+say_hello()       # say_hello 함수 실행
+
+
+
+def say_bye(who): 
+  print("bye", who)  
+
+
+say_bye("hyojin")    # bye hyojin
+
+
+def plus(a, b):
+  print(a + b)
+
+plus(4, 5)  # 4 + 5 = 9
+
+
+def minus(a, b = 0): # 인자에서 변수 선언과 동시에 값 지정 가능 
+  print(a - b)
+
+minus(8)   # 8 - 0 = 8
+
+
+
+def p_plus(a, b):
+  print(a + b)   # 값을 콘솔로 출력 
+
+def r_plus(a, b):
+  return a + b   # 값을 함수 외부(호출부)로 return
+                 # return과 동시에 함수 종료
+
+p_result = p_plus(2, 3)  # 단순히 해당 function 호출 (return X)
+r_result = r_plus(2, 3)  # 해당 function은 return된 값으로 치환됨
+
+print(p_result, r_result)   # None 5
+
+
+
+
+# keyword argument
+# 인자인데 위치에 따라서 정해지는게 아닌 argument의 이름으로 쌍을 이뤄주는 것
+# argument가 여러개인 경우 유용하게 사용할 수 있음
+
+def score(kor, eng):
+  print(kor, eng)  # 100, 90
+
+score(eng = 90, kor = 100) # 이 경우, 인자의 순서를 신경 쓸 필요 X 
+                           # 인자의 이름만 신경쓰면 됨
+
+
+
+
+# string 안에 변수 포함하여 작성하는 법
+# f(format)를 string 앞에 쓰고, 변수의 이름을{ }로 감싸줌
+
+def say_hi(name, age):
+  return f"Hello {name} you are {age} years old"
+
+hi = say_hi("hyojin", 26)
+print(hi)   # Hello hyojin you are 26 years old
+
+
+
+
+
