@@ -184,3 +184,46 @@ print(hi)   # Hello hyojin you are 26 years old
 
 
 
+# 4. Conditionals
+# 조건문
+# 기본적으로 소프트웨어의 로직을 컨트롤할 때 사용
+
+
+def plus(a, b):
+    if type(b) is int or type(b) is float:
+      return a + b
+    else:
+      return None 
+
+
+def age_check(age):
+  print(f"you are {age}")
+  if age < 18:
+    print("you cant drink")
+  elif age == 18:
+    print("you are new to this!") 
+  elif age > 20 and age < 25:
+    print("you are still kind of young")  
+  else:
+    print("enjoy your drink")  
+
+
+age_check(23)
+
+
+
+
+# loop
+# 반복문
+
+days = ["Mon", "Tue", "Wed", "Thur", "Fri"]
+
+for day in days:
+  if day is "Wed":
+    break    # for문의 loop를 break
+  else:  
+    print(day)
+
+
+
+    
