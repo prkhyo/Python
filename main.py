@@ -213,7 +213,7 @@ age_check(23)
 
 
 
-# loop
+# 5. loop
 # 반복문
 
 days = ["Mon", "Tue", "Wed", "Thur", "Fri"]
@@ -226,4 +226,3 @@ for day in days:
 
 
 
-    
