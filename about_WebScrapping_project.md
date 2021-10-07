@@ -1,26 +1,23 @@
 
 
 # Web Scrapping project using Python
-<br>
 
 
-
-## What is Web Scrapping?
+### What is Web Scrapping?
 
 Web Scrapping 이란 **웹 상의 데이터를 추출하는 것**<br>
 즉, 웹 사이트에서 **원하는 데이터를 추출**하여
 추출한 데이터를 **원하는 형식으로 가공하는 것**을 말함
 
+***
 <br>
 
-### Web Scrapping의 3가지 단계
+## Web Scrapping의 3가지 단계
 
 * **Scraping** : 데이터 가져오기 
 * **Parsing** : 데이터 파싱
 * **Manipulation** : 데이터 가공
 
-
-***
 <br>
 
 ## About this project
