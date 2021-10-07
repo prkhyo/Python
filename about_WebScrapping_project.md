@@ -22,6 +22,33 @@ Web Scrapping 이란 **웹 상의 데이터를 추출하는 것**<br>
 
 ## About this project
 
+### IDE
+* repl.it (https://repl.it/)
+
+### skills
+
+* Requests <br>
+(https://requests.readthedocs.io/projects/3/)
+(https://github.com/psf/requests)
+```
+- python으로 URL에서 자료 추출하기위해 사용
+- python 기본 라이브러리 urllib을 이용해도 충분히 html을 scrapping 할 수 있지만, 
+  requests라는 더 강력한 기능을 가진 온라인 라이브러리를 이용해서 좀 더 편리하게 scrapping
+```
+
+<br>
+
+* Beautiful Soup4<br>
+(https://www.crummy.com/software/BeautifulSoup/)
+
+```
+- HTML에서 정보를 추출하기위해 사용
+```
+
+<br>
+
+### project plan
+
 1. 유명한 구직 사이트 indeed, stackoverflow에서 파이썬 관련 일자리를 찾는 상황이라고 가정<br>
 2. 각 사이트 검색창에 'python'이라는 키워드로 검색하게되면 새로운 url로 들어가면서 다양한 검색 결과를 볼 수 있음<br>
 3. **python을 사용하여 scrapper 생성**<br>
