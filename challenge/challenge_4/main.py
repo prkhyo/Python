@@ -1,5 +1,11 @@
 
 
+# <Challenge goals> 
+# 보일러플레이트를 사용하여 웹사이트에서 국가 리스트와 해당 국가의 통화 코드를 스크래핑하여 
+# 사용자가 국가를 선택하면 해당 국가의 국가 코드를 표시하는 프로그램을 만드세요.
+
+
+
 import os
 import requests
 from bs4 import BeautifulSoup
