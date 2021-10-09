@@ -11,6 +11,8 @@ import requests
 from bs4 import BeautifulSoup
 
 
+os.system("clear")
+
 url = "https://www.iban.com/currency-codes"
 
 print("Hello! Please choose select a country by number: ")
@@ -69,7 +71,7 @@ while True:
   except ValueError:
     print("That wasn't a number...")
 
-os.system("clear")
+
 
 
 
