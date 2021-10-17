@@ -13,3 +13,73 @@
 # https://remoteok.io/
 # 세 사이트나 스크래핑 해야 하므로 코드를 관리하기 위해 사이트마다 스크래핑 해오는 코드를 
 # 따로따로 만들어 관리하는 걸 추천합니다.
+
+
+
+"""
+These are the URLs that will give you remote jobs for the word 'python'
+
+https://stackoverflow.com/jobs?r=true&q=python
+https://weworkremotely.com/remote-jobs/search?term=python
+https://remoteok.io/remote-dev+python-jobs
+
+Good luck!
+"""
+
+from flask import Flask, render_template, request, redirect, send_file
+from ro import get_jobs as get_ro_jobs
+from so import get_jobs as get_so_jobs
+from wwm import get_jobs as get_wwm_jobs
+from exporter import save_to_file
+
+app = Flask("JobScrapper")
+
+db = {}
+
+@app.route("/")
+def home():
+  return render_template("home.html")
+
+
+
+@app.route("/report")  
+def report():
+  word = request.args.get('word')
+  if word:
+    word = word.lower()
+    existingJobs = db.get(word)
+    if existingJobs:
+      jobs = existingJobs
+    else:  
+      jobs = get_ro_jobs(word) + get_so_jobs(word) + get_wwm_jobs(word)
+      db[word] = jobs
+  else:
+    return redirect("/")
+  return render_template("report.html", 
+  searchingBy=word,
+  resultsNumber = len(jobs),
+  jobs = jobs 
+  )
+
+
+@app.route("/export")
+def export(): 
+  try:
+    word = request.args.get('word')
+    if not word:
+      raise Exception() 
+    word = word.lower()
+    jobs = db.get(word) 
+    if not jobs: 
+      raise Exception()
+    save_to_file(jobs) 
+    return send_file("jobs.csv")
+  except:
+    return redirect("/")
+  
+    
+
+
+app.run(host="0.0.0.0")
+
+
